@@ -6,9 +6,9 @@ import LoginBtn from "./LoginBtn";
 
 const Header = () => {
   return (
-    <header className="w-full h-[70px] sticky top-0 border-b-2 border-[var(--border)] bg-background/95 backdrop-blur-md">
-      <nav className="container h-full mx-auto flex justify-between items-center">
-        <div className=" h-[40px] w-[70%] flex gap-3.5 items-center">
+    <header className="w-full h-[140px] sticky top-0  bg-background/95 backdrop-blur-md">
+      <nav className="container h-full mx-auto flex justify-between items-center px-5 ">
+        <div className=" h-[40px] w-[30%] flex gap-3.5 items-center justify-center">
           <Logo />
           <Menu />
         </div>
@@ -21,4 +21,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Header;  
