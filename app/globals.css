@@ -5,6 +5,30 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@font-face {
+  font-family: shabnamBold;
+  src: url("./../public/font/ttf/Shabnam-Bold.ttf");
+  src: url("./../public/font/woff/Shabnam-Bold.woff");
+  src: url("./../public/font/woff/Shabnam-Bold.woff2");
+}
+@font-face {
+  font-family: shabnamLight;
+  src: url("./../public/font/ttf/Shabnam-Light.ttf");
+  src: url("./../public/font/woff/Shabnam-Light.woff");
+  src: url("./../public/font/woff/Shabnam-Light.woff2");
+}
+@font-face {
+  font-family: shabnamMedium;
+  src: url("./../public/font/ttf/Shabnam-Medium.ttf");
+  src: url("./../public/font/woff/Shabnam-Medium.woff");
+  src: url("./../public/font/woff/Shabnam-Medium.woff2");
+}
+@font-face {
+  font-family: shabnamThin;
+  src: url("./../public/font/ttf/Shabnam-Thin.ttf");
+  src: url("./../public/font/woff/Shabnam-Thin.woff");
+  src: url("./../public/font/woff/Shabnam-Thin.woff2");
+}
 
 :root {
   --radius: 0.65rem;
@@ -73,4 +97,8 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.645 0.246 16.439);
+}
+
+.swiper {
+  overflow: visible !important;
 }
