@@ -12,9 +12,9 @@ import {
   EffectFlip,
 } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import Img1 from "./../public/heroImage/1.png";
-import Img2 from "./../public/heroImage/2.png";
-import Img3 from "./../public/heroImage/3.png";
+import Img1 from "./../../public/heroImage/1.png";
+import Img2 from "./../../public/heroImage/2.png";
+import Img3 from "./../../public/heroImage/3.png";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
 // Import Swiper styles
@@ -91,7 +91,7 @@ const HeroSection = () => {
       <Swiper
         // install Swiper modules
         modules={[Navigation, Pagination, Scrollbar, A11y, EffectCoverflow]}
-        spaceBetween={0}
+        spaceBetween={1}
         slidesPerView={1}
         // navigation
         // pagination={{ clickable: true }}
@@ -109,18 +109,19 @@ const HeroSection = () => {
           setIsEnd(swiper.isEnd);
         }}
         effect="coverflow"
-        className="h-[400px] rounded-[35px] mt-[30px]"
+        className="h-[400px] rounded-[35px] mt-[30px] "
+        id="heroSwiper"
       >
         {heroData.map((item, index) => (
-          <SwiperSlide className="bg-[#ffe1e8] rounded-[35px] relative " key={index}>
+          <SwiperSlide className="bg-[#ffe9f6] rounded-[35px] relative " key={index}>
             <div className="absolute top-0 right-0 bg-[var(--background)] h-[40%] w-[40%] rounded-[0_35px] select-none">
               <div className="w-full h-full relative">
                 {/* برای چپ بالا */}
                 <div className="absolute left-0 top-0 ml-[-30px]  border-l-[30px] border-l-transparent border-t-[30px] border-t-[#fff]"></div>
-                <div className="absolute left-0 top-0 ml-[-30px]  rounded-[0px_90px_0_0] bg-[#ffe1e8] h-[30px] w-[30px]"></div>
+                <div className="absolute left-0 top-0 ml-[-30px]  rounded-[0px_90px_0_0] bg-[#ffe9f6] h-[30px] w-[30px]"></div>
                 {/* برای راست پایین */}
                 <div className="absolute right-0 bottom-0 mb-[-30px]  border-l-[30px] border-l-transparent border-t-[30px] border-t-[#fff]"></div>
-                <div className="absolute right-0 bottom-0 mb-[-30px]  rounded-[0px_90px_0_0] bg-[#ffe1e8] h-[30px] w-[30px]"></div>
+                <div className="absolute right-0 bottom-0 mb-[-30px]  rounded-[0px_90px_0_0] bg-[#ffe9f6] h-[30px] w-[30px]"></div>
                 <p className="w-full h-full box-border flex text-center items-center text-[30px] px-[20px] font-[shabnamBold]">
                   {item.title}
                 </p>

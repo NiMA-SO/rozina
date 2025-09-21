@@ -1,11 +1,15 @@
-import HeroSection from "@/components/HeroSection";
-import SectionOffer from "@/components/SectionOffer";
+import BrandSwier from "@/components/home/brand/BrandSwier";
+import HeroSection from "@/components/home/HeroSection";
+import SectionOffer from "@/components/home/SectionOffer";
+import SwiperOfferA from "@/components/home/SwiperOfferA";
 
 export default function Home() {
   return (
-    <main className="h-[1000px]  container mx-auto bg-[#ffffff]">
+    <main className="container mx-auto bg-[#ffffff]">
       <HeroSection />
       <SectionOffer />
+      <SwiperOfferA />
+      <BrandSwier />
     </main>
   );
 }

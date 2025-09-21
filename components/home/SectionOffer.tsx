@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
-import image1 from './../public/b2.png'
-import image2 from './../public/b3.png'
+import image1 from './../../public/b2.png'
+import image2 from './../../public/b3.png'
 
 const SectionOffer = () => {
   return (
