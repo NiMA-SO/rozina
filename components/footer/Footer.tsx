@@ -1,3 +1,4 @@
+'use client'
 import Image from "next/image";
 import React from "react";
 import logo from "./../../public/logo/favicon.png";
@@ -7,20 +8,22 @@ import Cerrtificates from "./Cerrtificates";
 import { FiPhoneCall } from "react-icons/fi";
 import { FaGooglePlay } from "react-icons/fa";
 import { IoLogoPwa } from "react-icons/io5";
+import { useMediaQuery } from "react-responsive";
 
 
 const Footer = () => {
+   const lg = useMediaQuery({ query: "(min-width: 1024px)" });
   return (
     <footer className=" bg-[var(--primary)]  relative">
       {/* 1 */}
       <div className="w-full h-[100px] bg-[var(--primary)] relative flex items-center">
-        <div className="h-[40px] absolute left-0 lg:left-[200px] flex items-center">
+        {lg && <div className="lg:w-[400px] xl:w-[600px] 2xl:w-auto h-[40px] absolute left-0 lg:left-[200px] flex items-center">
           <p className="text-md font-[shabnamThin] text-[var(--primary-foreground)]">
             <strong className="font-[shabnamBold]">رزینا</strong> | فروشگاه
             اینترنتی لوازم آرایشی، عطر و محصولات مراقبت پوست و مو — خرید اصل با
             ارسال سریع
           </p>
-        </div>
+        </div>}
         <div className="h-[100%] md:mr-[20%] right-[50%] md:right-0 translate-x-[50%] md:translate-0 w-[200px] relative">
           <div className="absolute left-[50%] translate-x-[-50%] bottom-0 bg-white h-[60%] w-[80px] rounded-t-[60px] p-2.5">
             <Image src={logo} alt="" className="w-full mx-auto" />
@@ -49,7 +52,7 @@ const Footer = () => {
 
         <div className="h-auto py-8 bg-[#f2f6fc] mb-[40px]">
           <div className="container  mx-auto h-full flex justify-between items-center gap-9 flex-wrap">
-            <div className="flex justify-center items-center w-[500px] gap-6 mx-auto">
+            <div className="flex justify-center items-center w-[500px] gap-6 mx-auto px-[10px]">
               <div className="group w-[200px] px-1 h-[60px] bg-[var(--background)] shadow-sm rounded-[20px] flex justify-around items-center">
                 <div className="bg-[#ffe9f6] group-hover:bg-[var(--primary)] duration-300 text-[var(--primary)] group-hover:text-[var(--primary-foreground)] size-[35px] rounded-full flex justify-center items-center">
                   <FaGooglePlay />
@@ -81,7 +84,7 @@ const Footer = () => {
 
         {/* کپی رایت */}
         <div className="w-full rounded-t-[30px] bg-[#ffe9f6] h-[100px] flex justify-center items-center font-[shabnamThin] border-t-1 border-[var(--primary)]">
-          <div className="text-center">
+          <div className="text-center text-[14px] md:text-[16px]">
             <div>
               © {new Date().getFullYear()} <strong>رزینا</strong>. با عشق و
               تضمین اصالت — ارسال سریع و بازگشتِ آسان.

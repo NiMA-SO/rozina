@@ -23,6 +23,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import Image, { StaticImageData } from "next/image";
+import { useMediaQuery } from "react-responsive";
 
 const HeroSection = () => {
   // ref برای ذخیرهٔ instance سوایپر
@@ -31,6 +32,7 @@ const HeroSection = () => {
   // استیت برای غیرفعال/فعال کردن دکمه‌ها (اختیاری ولی مفید)
   const [isBeginning, setIsBeginning] = useState(true);
   const [isEnd, setIsEnd] = useState(false);
+   const md = useMediaQuery({ query: "(min-width: 768px)" });
 
   const heroData: {
     title: string;
@@ -62,7 +64,7 @@ const HeroSection = () => {
       className="h-[500px] w-full overflow-y-visible overflow-x-hidden relative "
       id="heroContainer"
     >
-      <div className="w-[100px] h-[45px] overflow-hidden  bg-[var(--background)] absolute left-[100px] top-2  shadow-[0_8px_24px_rgba(149,157,165,0.2)] z-20 rounded-[16px] flex justify-between text-black text-[20px]">
+      <div className="w-[100px] h-[45px] overflow-hidden  bg-[var(--background)] absolute left-[50px] md:left-[100px] top-2  shadow-[0_8px_24px_rgba(149,157,165,0.2)] z-20 rounded-[16px] flex justify-between text-black text-[20px]">
         <button
           onClick={() => swiperRef.current?.slidePrev()}
           disabled={isBeginning}
@@ -114,7 +116,7 @@ const HeroSection = () => {
       >
         {heroData.map((item, index) => (
           <SwiperSlide className="bg-[#ffe9f6] rounded-[35px] relative " key={index}>
-            <div className="absolute top-0 right-0 bg-[var(--background)] h-[40%] w-[40%] rounded-[0_35px] select-none">
+            <div className="absolute top-0 right-0 bg-[var(--background)] h-[50%] md:h-[40%] w-[60%] lg:w-[50%] rounded-[0_35px] select-none">
               <div className="w-full h-full relative">
                 {/* برای چپ بالا */}
                 <div className="absolute left-0 top-0 ml-[-30px]  border-l-[30px] border-l-transparent border-t-[30px] border-t-[#fff]"></div>
@@ -122,15 +124,15 @@ const HeroSection = () => {
                 {/* برای راست پایین */}
                 <div className="absolute right-0 bottom-0 mb-[-30px]  border-l-[30px] border-l-transparent border-t-[30px] border-t-[#fff]"></div>
                 <div className="absolute right-0 bottom-0 mb-[-30px]  rounded-[0px_90px_0_0] bg-[#ffe9f6] h-[30px] w-[30px]"></div>
-                <p className="w-full h-full box-border flex text-center items-center text-[30px] px-[20px] font-[shabnamBold]">
+                <p className="w-full h-full box-border flex text-center items-center text-[23px] lg:text-[30px] px-[10px] sm:px-[20px] font-[shabnamBold]">
                   {item.title}
                 </p>
               </div>
             </div>
-            <div className="absolute bottom-10 right-0 h-[40%] w-[60%]  flex flex-col justify-between pr-[40px] select-none">
-              <p className="text-[20px] text-[#141D26] font-[shabnamThin] leading-[30px]">
+            <div className="absolute bottom-[0px] md:bottom-10 right-0 h-[40%] md:w-[60%]  flex flex-col justify-center md:justify-between pr-[40px] select-none">
+              {md&&<p className="text-[17px] text-[#141D26] font-[shabnamThin] leading-[30px]">
                 {item.description}
-              </p>
+              </p>}
               <div>
                 <button className="group text-[16px] font-[shabnamMedium] text-[var(--primary-foreground)] flex items-center gap-[20px] cursor-pointer">
                   <div className="bg-[var(--primary)] group-hover:bg-[var(--background)] group-hover:text-[var(--primary)] duration-300  p-[13px_20px] rounded-[15px]">
@@ -145,7 +147,7 @@ const HeroSection = () => {
                 </button>
               </div>
             </div>
-            <div className="absolute bottom-0 left-0 ml-[30px] h-[100%] w-[40%] flex justify-center items-end ">
+            <div className="absolute bottom-[170px] sm:bottom-0 left-0 ml-[40px] h-[100%] w-[40%] flex justify-center items-end ">
               <Image src={item.image} alt="" className="w-[400px] mb-[-30px]" />
             </div>
           </SwiperSlide>

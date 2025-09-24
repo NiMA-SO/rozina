@@ -6,6 +6,11 @@ import SwiperBgImage from "./../../public/4545656.png";
 import Image from "next/image";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
+import { IoEyeOutline } from "react-icons/io5";
+import { CiHeart } from "react-icons/ci";
+import { MdOutlineAddShoppingCart } from "react-icons/md";
+
+
 
 const SwiperOfferA = () => {
   // ref برای ذخیرهٔ instance سوایپر
@@ -18,7 +23,7 @@ const SwiperOfferA = () => {
 
   return (
     <section
-      className="w-full h-[500px] my-[40px] bg-no-repeat bg-bottom relative"
+      className="w-full h-[550px] my-[40px] bg-no-repeat bg-bottom relative"
       style={{
         backgroundImage: `url(${SwiperBgImage?.src ?? SwiperBgImage})`,
         backgroundPosition: "center 85%", // تصویر رو پایین‌تر می‌بره (0%=top,100%=bottom)
@@ -60,9 +65,9 @@ const SwiperOfferA = () => {
         slidesPerView={1}
         breakpoints={{
           0: { slidesPerView: 1 },
-          600: { slidesPerView: 2},
-          900: { slidesPerView: 3},
-          1150: { slidesPerView: 4},
+          600: { slidesPerView: 2 },
+          900: { slidesPerView: 3 },
+          1150: { slidesPerView: 4 },
         }}
         // navigation={true}
         onSwiper={(swiper) => {
@@ -79,8 +84,8 @@ const SwiperOfferA = () => {
         }}
         className=" w-full h-[550px] px-[100px] "
       >
-        <SwiperSlide className=" h-full flex justify-center items-center  min-w-[320px] p-[20px] cursor-pointer mx-auto">
-          <div className=" bg-white h-[80%] w-full rounded-[30px] shadow-[0_2px_15px_rgba(124,79,126,0.11)] relative">
+        <SwiperSlide className=" h-full flex justify-center items-center  min-w-[320px] p-[20px] cursor-pointer mx-auto ">
+          <div className=" bg-[var(--background)] h-[80%] w-full rounded-[30px] shadow-[0_2px_15px_rgba(124,79,126,0.11)] relative">
             <div className="absolute w-[40%] h-[3px] bg-[var(--primary)] top-0  left-[50%] translate-x-[-50%] shadow-[0_1px_5px_0px_var(--primary)] rounded-full"></div>
             <div className="h-[60%] rounded-t-[30px] flex justify-center items-center">
               <Image src={SwiperImage} alt="" className="h-full w-[auto]" />
@@ -115,9 +120,25 @@ const SwiperOfferA = () => {
               </div>
             </div>
           </div>
+          <div className="w-full  h-[40px] mt-[10px] px-[20px] flex justify-between gap-1">
+            <div className="w-[70%]  flex justify-start items-center gap-[10px]">
+              <div className="size-[40px] bg-[var(--background)] text-black rounded-full flex justify-center items-center text-[19px] shadow-sm hover:bg-[var(--primary)] hover:text-[var(--primary-foreground)] duration-300">
+                <IoEyeOutline />
+              </div>
+              <div className="size-[40px] bg-[var(--background)] text-black rounded-full flex justify-center items-center text-[19px] shadow-sm hover:bg-[var(--primary)] hover:text-[var(--primary-foreground)] duration-300">
+               <CiHeart />
+              </div>
+            </div>
+            <div className="w-[30%]  flex justify-end items-center gap-[10px]">
+              <div className="size-[40px] bg-[var(--primary)] text-[var(--primary-foreground)] hover:text-[var(--primary)] hover:bg-[#ffe9f6] duration-300 rounded-full flex justify-center items-center text-[19px] shadow-sm">
+               <MdOutlineAddShoppingCart />
+              </div>
+
+            </div>
+          </div>
         </SwiperSlide>
-        <SwiperSlide className=" h-full flex justify-center items-center  min-w-[320px] p-[20px] cursor-pointer mx-auto">
-          <div className=" bg-white h-[80%] w-full rounded-[30px] shadow-[0_2px_15px_rgba(124,79,126,0.11)] relative">
+        <SwiperSlide className=" h-full flex justify-center items-center  min-w-[320px] p-[20px] cursor-pointer mx-auto ">
+          <div className=" bg-[var(--background)] h-[80%] w-full rounded-[30px] shadow-[0_2px_15px_rgba(124,79,126,0.11)] relative">
             <div className="absolute w-[40%] h-[3px] bg-[var(--primary)] top-0  left-[50%] translate-x-[-50%] shadow-[0_1px_5px_0px_var(--primary)] rounded-full"></div>
             <div className="h-[60%] rounded-t-[30px] flex justify-center items-center">
               <Image src={SwiperImage} alt="" className="h-full w-[auto]" />
@@ -152,9 +173,25 @@ const SwiperOfferA = () => {
               </div>
             </div>
           </div>
+          <div className="w-full  h-[40px] mt-[10px] px-[20px] flex justify-between gap-1">
+            <div className="w-[70%]  flex justify-start items-center gap-[10px]">
+              <div className="size-[40px] bg-[var(--background)] text-black rounded-full flex justify-center items-center text-[19px] shadow-sm hover:bg-[var(--primary)] hover:text-[var(--primary-foreground)] duration-300">
+                <IoEyeOutline />
+              </div>
+              <div className="size-[40px] bg-[var(--background)] text-black rounded-full flex justify-center items-center text-[19px] shadow-sm hover:bg-[var(--primary)] hover:text-[var(--primary-foreground)] duration-300">
+               <CiHeart />
+              </div>
+            </div>
+            <div className="w-[30%]  flex justify-end items-center gap-[10px]">
+              <div className="size-[40px] bg-[var(--primary)] text-[var(--primary-foreground)] hover:text-[var(--primary)] hover:bg-[#ffe9f6] duration-300 rounded-full flex justify-center items-center text-[19px] shadow-sm">
+               <MdOutlineAddShoppingCart />
+              </div>
+
+            </div>
+          </div>
         </SwiperSlide>
-        <SwiperSlide className=" h-full flex justify-center items-center  min-w-[320px] p-[20px] cursor-pointer mx-auto">
-          <div className=" bg-white h-[80%] w-full rounded-[30px] shadow-[0_2px_15px_rgba(124,79,126,0.11)] relative">
+        <SwiperSlide className=" h-full flex justify-center items-center  min-w-[320px] p-[20px] cursor-pointer mx-auto ">
+          <div className=" bg-[var(--background)] h-[80%] w-full rounded-[30px] shadow-[0_2px_15px_rgba(124,79,126,0.11)] relative">
             <div className="absolute w-[40%] h-[3px] bg-[var(--primary)] top-0  left-[50%] translate-x-[-50%] shadow-[0_1px_5px_0px_var(--primary)] rounded-full"></div>
             <div className="h-[60%] rounded-t-[30px] flex justify-center items-center">
               <Image src={SwiperImage} alt="" className="h-full w-[auto]" />
@@ -189,9 +226,25 @@ const SwiperOfferA = () => {
               </div>
             </div>
           </div>
+          <div className="w-full  h-[40px] mt-[10px] px-[20px] flex justify-between gap-1">
+            <div className="w-[70%]  flex justify-start items-center gap-[10px]">
+              <div className="size-[40px] bg-[var(--background)] text-black rounded-full flex justify-center items-center text-[19px] shadow-sm hover:bg-[var(--primary)] hover:text-[var(--primary-foreground)] duration-300">
+                <IoEyeOutline />
+              </div>
+              <div className="size-[40px] bg-[var(--background)] text-black rounded-full flex justify-center items-center text-[19px] shadow-sm hover:bg-[var(--primary)] hover:text-[var(--primary-foreground)] duration-300">
+               <CiHeart />
+              </div>
+            </div>
+            <div className="w-[30%]  flex justify-end items-center gap-[10px]">
+              <div className="size-[40px] bg-[var(--primary)] text-[var(--primary-foreground)] hover:text-[var(--primary)] hover:bg-[#ffe9f6] duration-300 rounded-full flex justify-center items-center text-[19px] shadow-sm">
+               <MdOutlineAddShoppingCart />
+              </div>
+
+            </div>
+          </div>
         </SwiperSlide>
-        <SwiperSlide className=" h-full flex justify-center items-center  min-w-[320px] p-[20px] cursor-pointer mx-auto">
-          <div className=" bg-white h-[80%] w-full rounded-[30px] shadow-[0_2px_15px_rgba(124,79,126,0.11)] relative">
+        <SwiperSlide className=" h-full flex justify-center items-center  min-w-[320px] p-[20px] cursor-pointer mx-auto ">
+          <div className=" bg-[var(--background)] h-[80%] w-full rounded-[30px] shadow-[0_2px_15px_rgba(124,79,126,0.11)] relative">
             <div className="absolute w-[40%] h-[3px] bg-[var(--primary)] top-0  left-[50%] translate-x-[-50%] shadow-[0_1px_5px_0px_var(--primary)] rounded-full"></div>
             <div className="h-[60%] rounded-t-[30px] flex justify-center items-center">
               <Image src={SwiperImage} alt="" className="h-full w-[auto]" />
@@ -226,9 +279,25 @@ const SwiperOfferA = () => {
               </div>
             </div>
           </div>
+          <div className="w-full  h-[40px] mt-[10px] px-[20px] flex justify-between gap-1">
+            <div className="w-[70%]  flex justify-start items-center gap-[10px]">
+              <div className="size-[40px] bg-[var(--background)] text-black rounded-full flex justify-center items-center text-[19px] shadow-sm hover:bg-[var(--primary)] hover:text-[var(--primary-foreground)] duration-300">
+                <IoEyeOutline />
+              </div>
+              <div className="size-[40px] bg-[var(--background)] text-black rounded-full flex justify-center items-center text-[19px] shadow-sm hover:bg-[var(--primary)] hover:text-[var(--primary-foreground)] duration-300">
+               <CiHeart />
+              </div>
+            </div>
+            <div className="w-[30%]  flex justify-end items-center gap-[10px]">
+              <div className="size-[40px] bg-[var(--primary)] text-[var(--primary-foreground)] hover:text-[var(--primary)] hover:bg-[#ffe9f6] duration-300 rounded-full flex justify-center items-center text-[19px] shadow-sm">
+               <MdOutlineAddShoppingCart />
+              </div>
+
+            </div>
+          </div>
         </SwiperSlide>
-        <SwiperSlide className=" h-full flex justify-center items-center  min-w-[320px] p-[20px] cursor-pointer mx-auto">
-          <div className=" bg-white h-[80%] w-full rounded-[30px] shadow-[0_2px_15px_rgba(124,79,126,0.11)] relative">
+        <SwiperSlide className=" h-full flex justify-center items-center  min-w-[320px] p-[20px] cursor-pointer mx-auto ">
+          <div className=" bg-[var(--background)] h-[80%] w-full rounded-[30px] shadow-[0_2px_15px_rgba(124,79,126,0.11)] relative">
             <div className="absolute w-[40%] h-[3px] bg-[var(--primary)] top-0  left-[50%] translate-x-[-50%] shadow-[0_1px_5px_0px_var(--primary)] rounded-full"></div>
             <div className="h-[60%] rounded-t-[30px] flex justify-center items-center">
               <Image src={SwiperImage} alt="" className="h-full w-[auto]" />
@@ -263,9 +332,25 @@ const SwiperOfferA = () => {
               </div>
             </div>
           </div>
+          <div className="w-full  h-[40px] mt-[10px] px-[20px] flex justify-between gap-1">
+            <div className="w-[70%]  flex justify-start items-center gap-[10px]">
+              <div className="size-[40px] bg-[var(--background)] text-black rounded-full flex justify-center items-center text-[19px] shadow-sm hover:bg-[var(--primary)] hover:text-[var(--primary-foreground)] duration-300">
+                <IoEyeOutline />
+              </div>
+              <div className="size-[40px] bg-[var(--background)] text-black rounded-full flex justify-center items-center text-[19px] shadow-sm hover:bg-[var(--primary)] hover:text-[var(--primary-foreground)] duration-300">
+               <CiHeart />
+              </div>
+            </div>
+            <div className="w-[30%]  flex justify-end items-center gap-[10px]">
+              <div className="size-[40px] bg-[var(--primary)] text-[var(--primary-foreground)] hover:text-[var(--primary)] hover:bg-[#ffe9f6] duration-300 rounded-full flex justify-center items-center text-[19px] shadow-sm">
+               <MdOutlineAddShoppingCart />
+              </div>
+
+            </div>
+          </div>
         </SwiperSlide>
-        <SwiperSlide className=" h-full flex justify-center items-center  min-w-[320px] p-[20px] cursor-pointer mx-auto">
-          <div className=" bg-white h-[80%] w-full rounded-[30px] shadow-[0_2px_15px_rgba(124,79,126,0.11)] relative">
+        <SwiperSlide className=" h-full flex justify-center items-center  min-w-[320px] p-[20px] cursor-pointer mx-auto ">
+          <div className=" bg-[var(--background)] h-[80%] w-full rounded-[30px] shadow-[0_2px_15px_rgba(124,79,126,0.11)] relative">
             <div className="absolute w-[40%] h-[3px] bg-[var(--primary)] top-0  left-[50%] translate-x-[-50%] shadow-[0_1px_5px_0px_var(--primary)] rounded-full"></div>
             <div className="h-[60%] rounded-t-[30px] flex justify-center items-center">
               <Image src={SwiperImage} alt="" className="h-full w-[auto]" />
@@ -298,6 +383,181 @@ const SwiperOfferA = () => {
                   </span>
                 </div>
               </div>
+            </div>
+          </div>
+          <div className="w-full  h-[40px] mt-[10px] px-[20px] flex justify-between gap-1">
+            <div className="w-[70%]  flex justify-start items-center gap-[10px]">
+              <div className="size-[40px] bg-[var(--background)] text-black rounded-full flex justify-center items-center text-[19px] shadow-sm hover:bg-[var(--primary)] hover:text-[var(--primary-foreground)] duration-300">
+                <IoEyeOutline />
+              </div>
+              <div className="size-[40px] bg-[var(--background)] text-black rounded-full flex justify-center items-center text-[19px] shadow-sm hover:bg-[var(--primary)] hover:text-[var(--primary-foreground)] duration-300">
+               <CiHeart />
+              </div>
+            </div>
+            <div className="w-[30%]  flex justify-end items-center gap-[10px]">
+              <div className="size-[40px] bg-[var(--primary)] text-[var(--primary-foreground)] hover:text-[var(--primary)] hover:bg-[#ffe9f6] duration-300 rounded-full flex justify-center items-center text-[19px] shadow-sm">
+               <MdOutlineAddShoppingCart />
+              </div>
+
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide className=" h-full flex justify-center items-center  min-w-[320px] p-[20px] cursor-pointer mx-auto ">
+          <div className=" bg-[var(--background)] h-[80%] w-full rounded-[30px] shadow-[0_2px_15px_rgba(124,79,126,0.11)] relative">
+            <div className="absolute w-[40%] h-[3px] bg-[var(--primary)] top-0  left-[50%] translate-x-[-50%] shadow-[0_1px_5px_0px_var(--primary)] rounded-full"></div>
+            <div className="h-[60%] rounded-t-[30px] flex justify-center items-center">
+              <Image src={SwiperImage} alt="" className="h-full w-[auto]" />
+            </div>
+            <div className="py-[10px] px-[30px] h-[70px]">
+              <p className="font-[shabnamBold] leading-[25px]">
+                رژ لب مایع مای سری Black Diamond مدل Perfection Matt
+              </p>
+            </div>
+            <div className="h-[70px] relative">
+              <div className="absolute w-[3PX] h-[90%] bg-[var(--primary)] left-0 shadow-[1px_0px_5px_0px_var(--primary)] rounded-full"></div>
+              <div className="w-full  h-[90%] grid grid-cols-2">
+                <div className="col-span-1 flex flex-col  px-[20px] ">
+                  <span className=" line-through font-[shabnamThin]  h-[50%] flex items-center">
+                    255000
+                  </span>
+                  <span className=" font-[shabnamBold]  h-[50%] flex items-center gap-1.5">
+                    <span>255000</span>
+                    <span className="text-[var(--primary)]">تومان</span>
+                  </span>
+                </div>
+                <div className="col-span-1  px-[30px] flex flex-col">
+                  <span className="flex justify-end items-center h-[50%]">
+                    <span className="w-[50px] h-full flex justify-center items-center bg-[var(--primary)] rounded-[90px] pl-0.5 text-[var(--primary-foreground)]">
+                      85%
+                    </span>
+                  </span>
+                  <span className="flex justify-end items-center h-[50%] font-[shabnamThin]">
+                    تخفیف
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="w-full  h-[40px] mt-[10px] px-[20px] flex justify-between gap-1">
+            <div className="w-[70%]  flex justify-start items-center gap-[10px]">
+              <div className="size-[40px] bg-[var(--background)] text-black rounded-full flex justify-center items-center text-[19px] shadow-sm hover:bg-[var(--primary)] hover:text-[var(--primary-foreground)] duration-300">
+                <IoEyeOutline />
+              </div>
+              <div className="size-[40px] bg-[var(--background)] text-black rounded-full flex justify-center items-center text-[19px] shadow-sm hover:bg-[var(--primary)] hover:text-[var(--primary-foreground)] duration-300">
+               <CiHeart />
+              </div>
+            </div>
+            <div className="w-[30%]  flex justify-end items-center gap-[10px]">
+              <div className="size-[40px] bg-[var(--primary)] text-[var(--primary-foreground)] hover:text-[var(--primary)] hover:bg-[#ffe9f6] duration-300 rounded-full flex justify-center items-center text-[19px] shadow-sm">
+               <MdOutlineAddShoppingCart />
+              </div>
+
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide className=" h-full flex justify-center items-center  min-w-[320px] p-[20px] cursor-pointer mx-auto ">
+          <div className=" bg-[var(--background)] h-[80%] w-full rounded-[30px] shadow-[0_2px_15px_rgba(124,79,126,0.11)] relative">
+            <div className="absolute w-[40%] h-[3px] bg-[var(--primary)] top-0  left-[50%] translate-x-[-50%] shadow-[0_1px_5px_0px_var(--primary)] rounded-full"></div>
+            <div className="h-[60%] rounded-t-[30px] flex justify-center items-center">
+              <Image src={SwiperImage} alt="" className="h-full w-[auto]" />
+            </div>
+            <div className="py-[10px] px-[30px] h-[70px]">
+              <p className="font-[shabnamBold] leading-[25px]">
+                رژ لب مایع مای سری Black Diamond مدل Perfection Matt
+              </p>
+            </div>
+            <div className="h-[70px] relative">
+              <div className="absolute w-[3PX] h-[90%] bg-[var(--primary)] left-0 shadow-[1px_0px_5px_0px_var(--primary)] rounded-full"></div>
+              <div className="w-full  h-[90%] grid grid-cols-2">
+                <div className="col-span-1 flex flex-col  px-[20px] ">
+                  <span className=" line-through font-[shabnamThin]  h-[50%] flex items-center">
+                    255000
+                  </span>
+                  <span className=" font-[shabnamBold]  h-[50%] flex items-center gap-1.5">
+                    <span>255000</span>
+                    <span className="text-[var(--primary)]">تومان</span>
+                  </span>
+                </div>
+                <div className="col-span-1  px-[30px] flex flex-col">
+                  <span className="flex justify-end items-center h-[50%]">
+                    <span className="w-[50px] h-full flex justify-center items-center bg-[var(--primary)] rounded-[90px] pl-0.5 text-[var(--primary-foreground)]">
+                      85%
+                    </span>
+                  </span>
+                  <span className="flex justify-end items-center h-[50%] font-[shabnamThin]">
+                    تخفیف
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="w-full  h-[40px] mt-[10px] px-[20px] flex justify-between gap-1">
+            <div className="w-[70%]  flex justify-start items-center gap-[10px]">
+              <div className="size-[40px] bg-[var(--background)] text-black rounded-full flex justify-center items-center text-[19px] shadow-sm hover:bg-[var(--primary)] hover:text-[var(--primary-foreground)] duration-300">
+                <IoEyeOutline />
+              </div>
+              <div className="size-[40px] bg-[var(--background)] text-black rounded-full flex justify-center items-center text-[19px] shadow-sm hover:bg-[var(--primary)] hover:text-[var(--primary-foreground)] duration-300">
+               <CiHeart />
+              </div>
+            </div>
+            <div className="w-[30%]  flex justify-end items-center gap-[10px]">
+              <div className="size-[40px] bg-[var(--primary)] text-[var(--primary-foreground)] hover:text-[var(--primary)] hover:bg-[#ffe9f6] duration-300 rounded-full flex justify-center items-center text-[19px] shadow-sm">
+               <MdOutlineAddShoppingCart />
+              </div>
+
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide className=" h-full flex justify-center items-center  min-w-[320px] p-[20px] cursor-pointer mx-auto ">
+          <div className=" bg-[var(--background)] h-[80%] w-full rounded-[30px] shadow-[0_2px_15px_rgba(124,79,126,0.11)] relative">
+            <div className="absolute w-[40%] h-[3px] bg-[var(--primary)] top-0  left-[50%] translate-x-[-50%] shadow-[0_1px_5px_0px_var(--primary)] rounded-full"></div>
+            <div className="h-[60%] rounded-t-[30px] flex justify-center items-center">
+              <Image src={SwiperImage} alt="" className="h-full w-[auto]" />
+            </div>
+            <div className="py-[10px] px-[30px] h-[70px]">
+              <p className="font-[shabnamBold] leading-[25px]">
+                رژ لب مایع مای سری Black Diamond مدل Perfection Matt
+              </p>
+            </div>
+            <div className="h-[70px] relative">
+              <div className="absolute w-[3PX] h-[90%] bg-[var(--primary)] left-0 shadow-[1px_0px_5px_0px_var(--primary)] rounded-full"></div>
+              <div className="w-full  h-[90%] grid grid-cols-2">
+                <div className="col-span-1 flex flex-col  px-[20px] ">
+                  <span className=" line-through font-[shabnamThin]  h-[50%] flex items-center">
+                    255000
+                  </span>
+                  <span className=" font-[shabnamBold]  h-[50%] flex items-center gap-1.5">
+                    <span>255000</span>
+                    <span className="text-[var(--primary)]">تومان</span>
+                  </span>
+                </div>
+                <div className="col-span-1  px-[30px] flex flex-col">
+                  <span className="flex justify-end items-center h-[50%]">
+                    <span className="w-[50px] h-full flex justify-center items-center bg-[var(--primary)] rounded-[90px] pl-0.5 text-[var(--primary-foreground)]">
+                      85%
+                    </span>
+                  </span>
+                  <span className="flex justify-end items-center h-[50%] font-[shabnamThin]">
+                    تخفیف
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="w-full  h-[40px] mt-[10px] px-[20px] flex justify-between gap-1">
+            <div className="w-[70%]  flex justify-start items-center gap-[10px]">
+              <div className="size-[40px] bg-[var(--background)] text-black rounded-full flex justify-center items-center text-[19px] shadow-sm hover:bg-[var(--primary)] hover:text-[var(--primary-foreground)] duration-300">
+                <IoEyeOutline />
+              </div>
+              <div className="size-[40px] bg-[var(--background)] text-black rounded-full flex justify-center items-center text-[19px] shadow-sm hover:bg-[var(--primary)] hover:text-[var(--primary-foreground)] duration-300">
+               <CiHeart />
+              </div>
+            </div>
+            <div className="w-[30%]  flex justify-end items-center gap-[10px]">
+              <div className="size-[40px] bg-[var(--primary)] text-[var(--primary-foreground)] hover:text-[var(--primary)] hover:bg-[#ffe9f6] duration-300 rounded-full flex justify-center items-center text-[19px] shadow-sm">
+               <MdOutlineAddShoppingCart />
+              </div>
+
             </div>
           </div>
         </SwiperSlide>

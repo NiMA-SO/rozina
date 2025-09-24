@@ -20,7 +20,6 @@ const PinkBoxSlide = () => {
               <div className="col-span-2 flex flex-col justify-start gap-1 items-center text-[var(--primary-foreground)]">
                 <span className="text-sm">
                   <span className="line-through">200,000</span>
-                  <span className="font-[shabnamBold] mr-1">تومان</span>{" "}
                 </span>
                 <span className="flex">
                   <span className="">100,000</span>
