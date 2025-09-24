@@ -112,6 +112,11 @@
 }
 
 
+*::selection{
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+}
+
 #heroSwiper{
   overflow: visible !important;
 }
