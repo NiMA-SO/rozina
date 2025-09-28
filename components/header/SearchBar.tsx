@@ -6,7 +6,7 @@ import { IoCloseCircleOutline } from "react-icons/io5";
 const SearchBar = () => {
   const [showClose, setShowClose] = useState(false);
   return (
-    <div className="w-[70%] h-[90px] bg-[var(--background)] rounded-[16px] shadow-[0_8px_24px_rgba(149,157,165,0.2)] flex items-center justify-around relative">
+    <div className="w-[70%] h-[60px] lg:h-[90px] px-3 bg-[var(--background)] rounded-[16px] shadow-[0_8px_24px_rgba(149,157,165,0.2)] flex items-center justify-around relative">
       <div className="h-[30px] w-[3px] absolute right-0 bg-[var(--primary)] rounded-full"></div>
       <input
         type="search"

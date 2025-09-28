@@ -121,16 +121,105 @@ export const categories: NavItem[] = [
     icon: skinCare,
     label: "مراقبت پوست",
     children: [
-      { id: "2-1", label: "پاکسازی و آماده‌سازی", href: "/shop/skin/cleansers" },
-      { id: "2-2", label: "مرطوب‌کننده‌ها و آبرسان‌ها", href: "/shop/skin/moisturizers" },
-      { id: "2-3", label: "محافظت (ضد آفتاب)", href: "/shop/skin/suncare" },
-      { id: "2-4", label: "سرم‌ها و درمان‌ها", href: "/shop/skin/serums-treatments" },
-      { id: "2-5", label: "ضدجوش و کنترل آکنه", href: "/shop/skin/acne" },
-      { id: "2-6", label: "چشم و لب", href: "/shop/skin/eyes-lips" },
-      { id: "2-7", label: "ماسک‌ها و لایه‌بردار", href: "/shop/skin/masks-exfoliants" },
-      { id: "2-8", label: "ترمیم و مراقبت بدن", href: "/shop/skin/repair-body" },
-      { id: "2-9", label: "پوشاننده‌ها", href: "/shop/skin/coverage" },
-      { id: "2-10", label: "پکیج‌ها", href: "/shop/skin/kits" },
+      {
+        id: "2-1",
+        label: "مراقبت صورت",
+        icon: "FaceIcon",
+        href: "/shop/skin/face-care",
+        children: [
+          { id: "2-1-1", label: "کرم روز" },
+          { id: "2-1-2", label: "کرم شب" },
+          { id: "2-1-3", label: "مرطوب‌کننده" },
+          { id: "2-1-4", label: "آبرسان" },
+          { id: "2-1-5", label: "روشن‌کننده" },
+          { id: "2-1-6", label: "سرم صورت" },
+          { id: "2-1-7", label: "سرم پوست" },
+          { id: "2-1-8", label: "ضد لک" },
+          { id: "2-1-9", label: "ضد چروک" },
+          { id: "2-1-10", label: "لیفتینگ" },
+          { id: "2-1-11", label: "تقویت کننده پوست" },
+          { id: "2-1-12", label: "ضد آکنه" },
+          { id: "2-1-13", label: "کرم سفت کننده پوست" },
+          { id: "2-1-14", label: "کرم پوشاننده" },
+          { id: "2-1-15", label: "کرم و ژل ضد جوش" },
+          { id: "2-1-16", label: "کرم تصفیه کننده پوست" },
+          { id: "2-1-17", label: "مکمل پوست" },
+          { id: "2-1-18", label: "پکیج مراقبت پوست" },
+        ],
+      },
+
+      {
+        id: "2-2",
+        label: "پاک‌کننده و شوینده",
+        icon: "CleanserIcon",
+        href: "/shop/skin/cleansers",
+        children: [
+          { id: "2-2-1", label: "پاک کننده" },
+          { id: "2-2-2", label: "لایه‌بردار" },
+          { id: "2-2-3", label: "ماسک ورقه‌ای" },
+          { id: "2-2-4", label: "ماسک صورت و بدن" },
+        ],
+      },
+
+      {
+        id: "2-3",
+        label: "مراقبت چشم و ابرو",
+        icon: "EyeIcon",
+        href: "/shop/skin/eyes-eyebrow",
+        children: [
+          { id: "2-3-1", label: "کرم دور چشم" },
+          { id: "2-3-2", label: "ضد پف و تیرگی دور چشم" },
+          { id: "2-3-3", label: "محصولات مراقبتی ابرو" },
+          { id: "2-3-4", label: "سرم تقویت ابرو / روغن رشد ابرو" },
+        ],
+      },
+
+      {
+        id: "2-4",
+        label: "مراقبت بدن",
+        icon: "BodyIcon",
+        href: "/shop/skin/body-care",
+        children: [
+          { id: "2-4-1", label: "کرم و لوسیون بدن" },
+          { id: "2-4-2", label: "کرم و ژل ترمیم کننده" },
+          { id: "2-4-3", label: "ضد درد، سوختگی و التهاب" },
+          { id: "2-4-4", label: "کرم بچگانه" },
+        ],
+      },
+
+      {
+        id: "2-5",
+        label: "مراقبت لب",
+        icon: "LipIcon",
+        href: "/shop/skin/lip-care",
+        children: [
+          { id: "2-5-1", label: "مراقبت لب / بالم لب" },
+          { id: "2-5-2", label: "ماسک لب" },
+        ],
+      },
+
+      {
+        id: "2-6",
+        label: "مراقبت دست و ناخن",
+        icon: "HandIcon",
+        href: "/shop/skin/hand-nail-care",
+        children: [
+          { id: "2-6-1", label: "کرم دست" },
+          { id: "2-6-2", label: "محصولات مراقبت ناخن" },
+          { id: "2-6-3", label: "کرم و لوسیون (دست/ناخن)" },
+        ],
+      },
+
+      {
+        id: "2-7",
+        label: "مراقبت پا",
+        icon: "FootIcon",
+        href: "/shop/skin/foot-care",
+        children: [
+          { id: "2-7-1", label: "کرم پا / ترک پا" },
+          { id: "2-7-2", label: "ماسک پا" },
+        ],
+      },
     ],
   },
   {
@@ -139,17 +228,134 @@ export const categories: NavItem[] = [
     icon: hairCare,
     label: "مراقبت مو",
     children: [
-      { id: "3-1", label: "شامپوها", href: "/shop/hair/shampoos" },
-      { id: "3-2", label: "نرم‌کننده‌ها", href: "/shop/hair/conditioners" },
-      { id: "3-3", label: "روغن‌ها و تغذیه‌کننده‌ها", href: "/shop/hair/oils-nutrition" },
-      { id: "3-4", label: "ماسک‌ها و ترمیم عمیق", href: "/shop/hair/masks" },
-      { id: "3-5", label: "درمان‌ها، سرم و تقویت", href: "/shop/hair/treatments-serums" },
-      { id: "3-6", label: "مراقبت پوست سر", href: "/shop/hair/scalp-care" },
-      { id: "3-7", label: "حجم‌دهنده و درخشان‌کننده", href: "/shop/hair/volume-shine" },
-      { id: "3-8", label: "حالت‌دهنده‌ها و فینیشینگ", href: "/shop/hair/styling" },
-      { id: "3-9", label: "ابزار و لوازم جانبی", href: "/shop/hair/tools" },
-      { id: "3-10", label: "رنگ و درمان‌های شیمیایی", href: "/shop/hair/color" },
-      { id: "3-11", label: "پکیج‌ها و روتین‌ها", href: "/shop/hair/kits" },
+      {
+        id: "3-1",
+        label: "شامپو",
+        icon: "ShampooIcon",
+        href: "/shop/hair/shampoos",
+        children: [
+          {
+            id: "3-1-1",
+            label: "شامپو معمولی",
+            href: "/shop/hair/shampoos/regular",
+          },
+          {
+            id: "3-1-2",
+            label: "شامپو ضد شوره",
+            href: "/shop/hair/shampoos/anti-dandruff",
+          },
+          {
+            id: "3-1-3",
+            label: "شامپو ضد ریزش",
+            href: "/shop/hair/shampoos/anti-hairfall",
+          },
+          {
+            id: "3-1-4",
+            label: "شامپو ضد خارش",
+            href: "/shop/hair/shampoos/anti-itch",
+          },
+          {
+            id: "3-1-5",
+            label: "شامپو ضد موخوره",
+            href: "/shop/hair/shampoos/anti-split-ends",
+          },
+          {
+            id: "3-1-6",
+            label: "شامپو ضد وز",
+            href: "/shop/hair/shampoos/anti-frizz",
+          },
+        ],
+      },
+      {
+        id: "3-2",
+        label: "مراقبت از مو",
+        icon: "TreatmentIcon",
+        href: "/shop/hair/care",
+        children: [
+          {
+            id: "3-2-1",
+            label: "آبرسان مو",
+            href: "/shop/hair/care/hydrators",
+          },
+          {
+            id: "3-2-2",
+            label: "نرم‌کننده مو",
+            href: "/shop/hair/care/conditioners",
+          },
+          { id: "3-2-3", label: "ماسک مو", href: "/shop/hair/care/masks" },
+          { id: "3-2-4", label: "کراتین مو", href: "/shop/hair/care/keratin" },
+          {
+            id: "3-2-5",
+            label: "درمان و تقویت مو",
+            href: "/shop/hair/care/treatments",
+          },
+          {
+            id: "3-2-6",
+            label: "سرم و اسپری مو (محصولات درمانی)",
+            href: "/shop/hair/care/serums-sprays",
+          },
+          { id: "3-2-7", label: "روغن مو", href: "/shop/hair/care/oils" },
+          {
+            id: "3-2-8",
+            label: "تغذیه‌کننده / تقویت‌کننده",
+            href: "/shop/hair/care/nutrition-strength",
+          },
+          { id: "3-2-9", label: "کرم مو", href: "/shop/hair/care/creams" },
+          {
+            id: "3-2-10",
+            label: "مکمل مو",
+            href: "/shop/hair/care/supplements",
+          },
+        ],
+      },
+      {
+        id: "3-3",
+        label: "زیبایی مو",
+        icon: "StyleIcon",
+        href: "/shop/hair/beauty",
+        children: [
+          { id: "3-3-1", label: "حجم‌دهنده", href: "/shop/hair/beauty/volume" },
+          {
+            id: "3-3-2",
+            label: "درخشان‌کننده",
+            href: "/shop/hair/beauty/shine",
+          },
+          {
+            id: "3-3-3",
+            label: "حالت‌دهنده مو",
+            href: "/shop/hair/beauty/styling-products",
+          },
+          {
+            id: "3-3-4",
+            label: "اسپری حالت‌دهنده / فیکس",
+            href: "/shop/hair/beauty/sprays",
+          },
+          {
+            id: "3-3-5",
+            label: "رنگ مو",
+            href: "/shop/hair/beauty/hair-color",
+          },
+        ],
+      },
+      {
+        id: "3-4",
+        label: "ابزار آرایش و پیرایش",
+        icon: "ToolIcon",
+        href: "/shop/hair/tools",
+        children: [
+          { id: "3-4-1", label: "اتو مو", href: "/shop/hair/tools/flat-irons" },
+          {
+            id: "3-4-2",
+            label: "ابزار جانبی مو (برس، کلیپس، کش و ...)",
+            href: "/shop/hair/tools/accessories",
+          },
+          {
+            id: "3-4-3",
+            label: "ابزار برقی (سشوار، فرکننده و ...)",
+            href: "/shop/hair/tools/electric",
+          },
+        ],
+      },
     ],
   },
   {
@@ -158,14 +364,136 @@ export const categories: NavItem[] = [
     icon: personalHygiene,
     label: "لوازم بهداشتی",
     children: [
-      { id: "4-1", label: "بهداشت و مراقبت جنسی", href: "/shop/hygiene/sexual-health" },
-      { id: "4-2", label: "دستمال مرطوب", href: "/shop/hygiene/wet-wipes" },
-      { id: "4-3", label: "محصولات بهداشتی بانوان", href: "/shop/hygiene/feminine-care" },
-      { id: "4-4", label: "لوازم بهداشتی کودک", href: "/shop/hygiene/baby-care" },
-      { id: "4-5", label: "شامپو و مراقبت مو", href: "/shop/hygiene/hair-care" },
+      {
+        id: "4-1",
+        label: "بهداشت و مراقبت جنسی",
+        icon: "ShieldHeartIcon",
+        href: "/shop/hygiene/sexual-health",
+        children: [
+          {
+            id: "4-1-1",
+            label: "ژل بهداشتی/لُبریکنت",
+            href: "/shop/hygiene/sexual-health/gels",
+          },
+          {
+            id: "4-1-2",
+            label: "کاندوم",
+            href: "/shop/hygiene/sexual-health/condoms",
+          },
+          {
+            id: "4-1-3",
+            label: "کاندوم خاردار",
+            href: "/shop/hygiene/sexual-health/textured-condoms",
+          },
+          {
+            id: "4-1-4",
+            label: "اسپری (محصولات ویژه)",
+            href: "/shop/hygiene/sexual-health/sprays",
+          },
+        ],
+      },
+      {
+        id: "4-2",
+        label: "دستمال مرطوب",
+        icon: "WipeIcon",
+        href: "/shop/hygiene/wet-wipes",
+        children: [
+          {
+            id: "4-2-1",
+            label: "دستمال مرطوب آنتی‌باکتریال",
+            href: "/shop/hygiene/wet-wipes/antibacterial",
+          },
+          {
+            id: "4-2-2",
+            label: "دستمال مرطوب بانوان",
+            href: "/shop/hygiene/wet-wipes/feminine",
+          },
+          {
+            id: "4-2-3",
+            label: "دستمال مرطوب کودک",
+            href: "/shop/hygiene/wet-wipes/baby",
+          },
+          {
+            id: "4-2-4",
+            label: "دستمال مرطوب بزرگسالان",
+            href: "/shop/hygiene/wet-wipes/adult",
+          },
+          {
+            id: "4-2-5",
+            label: "دستمال مرطوب پاک‌کننده آرایش",
+            href: "/shop/hygiene/wet-wipes/makeup-remover",
+          },
+        ],
+      },
+      {
+        id: "4-3",
+        label: "محصولات بهداشتی بانوان",
+        icon: "FemaleIcon",
+        href: "/shop/hygiene/feminine-care",
+        children: [
+          {
+            id: "4-3-1",
+            label: "دستمال بانوان",
+            href: "/shop/hygiene/feminine-care/wipes",
+          },
+          {
+            id: "4-3-2",
+            label: "نوار بهداشتی",
+            href: "/shop/hygiene/feminine-care/pads",
+          },
+          {
+            id: "4-3-3",
+            label: "تیغ اصلاح زنانه",
+            href: "/shop/hygiene/feminine-care/razors",
+          },
+          {
+            id: "4-3-4",
+            label: "ژل بهداشتی بانوان",
+            href: "/shop/hygiene/feminine-care/intimate-gels",
+          },
+        ],
+      },
+      {
+        id: "4-4",
+        label: "شامپو و مراقبت مو",
+        icon: "ShampooIcon",
+        href: "/shop/hygiene/hair-care",
+        children: [
+          {
+            id: "4-4-1",
+            label: "شامپو",
+            href: "/shop/hygiene/hair-care/shampoos",
+          },
+          {
+            id: "4-4-2",
+            label: "لوسیون مو",
+            href: "/shop/hygiene/hair-care/lotions",
+          },
+          {
+            id: "4-4-3",
+            label: "شامپو بچگانه",
+            href: "/shop/hygiene/hair-care/baby-shampoos",
+          },
+          {
+            id: "4-4-4",
+            label: "سرم و اسپری مو",
+            href: "/shop/hygiene/hair-care/serums-sprays",
+          },
+          {
+            id: "4-4-5",
+            label: "تقویت‌کننده مو",
+            href: "/shop/hygiene/hair-care/strengtheners",
+          },
+        ],
+      },
     ],
   },
-  { id: "5", href: "/category/perfume", icon: perfume, label: "عطر و ادکلن زنانه" },
+  {
+    id: "5",
+    href: "/category/perfume",
+    icon: perfume,
+    label: "عطر و ادکلن زنانه",
+  },
   // نمونه برای لوازم برقی اگر خواستید فعالش کنید
   // { id: "6", href: "/category/appliances", icon: appliances, label: "لوازم شخصی برقی" },
 ];
