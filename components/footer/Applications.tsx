@@ -6,14 +6,14 @@ import { IoLogoPwa } from "react-icons/io5";
 const Applications = () => {
   return (
     <div className="container  mx-auto h-full flex justify-between items-center gap-9 flex-wrap">
-      <div className="flex justify-center items-center w-[500px] gap-6 mx-auto px-[10px]">
-        <div className="group w-[200px] px-1 h-[60px] bg-[var(--background)] shadow-sm rounded-[20px] flex justify-around items-center">
+      <div className="flex justify-center items-center flex-wrap w-[500px] gap-6 mx-auto px-[10px]">
+        <div className="group w-[200px] px-2.5 h-[60px] bg-[var(--background)] shadow-sm rounded-[20px] flex justify-between items-center">
           <div className="bg-[#ffe9f6] group-hover:bg-[var(--primary)] duration-300 text-[var(--primary)] group-hover:text-[var(--primary-foreground)] size-[35px] rounded-full flex justify-center items-center">
             <FaGooglePlay />
           </div>
           <span className="font-[shabnamThin]">دانلود از google play</span>
         </div>
-        <div className="group w-[200px] px-1 h-[60px] bg-[var(--background)] shadow-sm rounded-[20px] flex justify-around items-center">
+        <div className="group w-[200px] px-2.5 h-[60px] bg-[var(--background)] shadow-sm rounded-[20px] flex justify-between items-center">
           <div className="bg-[#ffe9f6] group-hover:bg-[var(--primary)] duration-300 text-[var(--primary)] group-hover:text-[var(--primary-foreground)] size-[35px] rounded-full flex justify-center items-center">
             <IoLogoPwa />
           </div>
