@@ -1,8 +1,8 @@
 "use client";
 import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperImage from "./../../public/swiper.jpg";
-import SwiperBgImage from "./../../public/4545656.png";
+import SwiperImage from "./../../../public/swiper.jpg";
+import SwiperBgImage from "./../../../public/4545656.png";
 import Image from "next/image";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
@@ -12,7 +12,7 @@ import { MdOutlineAddShoppingCart } from "react-icons/md";
 
 
 
-const SwiperOfferA = () => {
+const OfferSwiper  = () => {
   // ref برای ذخیرهٔ instance سوایپر
   const swiperRef = useRef<any>(null);
 
@@ -566,4 +566,4 @@ const SwiperOfferA = () => {
   );
 };
 
-export default SwiperOfferA;
+export default OfferSwiper ;

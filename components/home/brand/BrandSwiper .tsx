@@ -14,7 +14,7 @@ import img9 from "./../../../public/brand/schon.webp";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
 
-const BrandSwier = () => {
+const BrandSwiper  = () => {
   // ref برای ذخیرهٔ instance سوایپر
   const swiperRef = useRef<any>(null);
 
@@ -134,4 +134,4 @@ const BrandSwier = () => {
   );
 };
 
-export default BrandSwier;
+export default BrandSwiper ;

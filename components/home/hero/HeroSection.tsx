@@ -5,23 +5,16 @@ import {
   Pagination,
   Scrollbar,
   A11y,
-  EffectFade,
-  EffectCards,
   EffectCoverflow,
-  EffectCube,
-  EffectFlip,
 } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import Img1 from "./../../public/heroImage/1.png";
-import Img2 from "./../../public/heroImage/2.png";
-import Img3 from "./../../public/heroImage/3.png";
+import Img1 from "./../../../public/heroImage/1.png";
+import Img2 from "./../../../public/heroImage/2.png";
+import Img3 from "./../../../public/heroImage/3.png";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
 // Import Swiper styles
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
+
 import Image, { StaticImageData } from "next/image";
 import { useMediaQuery } from "react-responsive";
 
@@ -32,7 +25,6 @@ const HeroSection = () => {
   // استیت برای غیرفعال/فعال کردن دکمه‌ها (اختیاری ولی مفید)
   const [isBeginning, setIsBeginning] = useState(true);
   const [isEnd, setIsEnd] = useState(false);
-   const md = useMediaQuery({ query: "(min-width: 768px)" });
 
   const heroData: {
     title: string;
@@ -130,9 +122,9 @@ const HeroSection = () => {
               </div>
             </div>
             <div className="absolute bottom-[0px] md:bottom-10 right-0 h-[40%] md:w-[60%]  flex flex-col justify-center md:justify-between pr-[40px] select-none">
-              {md&&<p className="text-[17px] text-[#141D26] font-[shabnamThin] leading-[30px]">
+              <p className="text-[17px] md:block hidden text-[#141D26] font-[shabnamThin] leading-[30px]">
                 {item.description}
-              </p>}
+              </p>
               <div>
                 <button className="group text-[16px] font-[shabnamMedium] text-[var(--primary-foreground)] flex items-center gap-[20px] cursor-pointer">
                   <div className="bg-[var(--primary)] group-hover:bg-[var(--background)] group-hover:text-[var(--primary)] duration-300  p-[13px_20px] rounded-[15px]">

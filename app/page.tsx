@@ -1,20 +1,20 @@
-import BrandSwier from "@/components/home/brand/BrandSwier";
-import HeroSection from "@/components/home/HeroSection";
-import PinkBox from "@/components/home/pinkBox/PinkBox";
-import SectionOffer from "@/components/home/SectionOffer";
-import SwiperOfferA from "@/components/home/SwiperOfferA";
+import BrandSwiper  from "@/components/home/brand/BrandSwiper ";
+import HeroSection from "@/components/home/hero/HeroSection";
+import PinkBoxSection from "@/components/home/pinkBox/PinkBoxSection";
+import ImageOffersSection from "@/components/home/imageOffers/ImageOffersSection";
+import OfferSwiper  from "@/components/home/offerSwiper/OfferSwiper";
 
 export default function Home() {
   return (
     <main>
       <main className="container mx-auto bg-[var(--background)]">
         <HeroSection />
-        <SectionOffer />
+        <ImageOffersSection />
       </main>
-      <PinkBox />
+      <PinkBoxSection />
       <main className="container mx-auto bg-[var(--background)]">
-        <SwiperOfferA />
-        <BrandSwier />
+        <OfferSwiper  />
+        <BrandSwiper  />
       </main>
     </main>
   );

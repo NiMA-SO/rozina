@@ -3,7 +3,7 @@ import pinkBoxImage from "./../../../public/pinkbox/ChatGPT Image Sep 23, 2025, 
 import Image from "next/image";
 import PinkBoxSlide from "./PinkBoxSlide";
 
-const PinkBox = () => {
+const PinkBoxSection = () => {
   const counter = [0, 1, 2, 3, 4];
 
   return (
@@ -40,4 +40,4 @@ const PinkBox = () => {
   );
 };
 
-export default PinkBox;
+export default PinkBoxSection;
