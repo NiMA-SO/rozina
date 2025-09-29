@@ -1,9 +1,9 @@
-import makeup from "./../../public/menu/makeup.svg";
-import skinCare from "./../../public/menu/skin-care.svg";
-import hairCare from "./../../public/menu/hair-care.svg";
-import personalHygiene from "./../../public/menu/personal-hygiene.svg";
-import perfume from "./../../public/menu/perfume.svg";
-import appliances from "./../../public/menu/appliances.svg";
+import makeup from "./../../../public/menu/makeup.svg";
+import skinCare from "./../../../public/menu/skin-care.svg";
+import hairCare from "./../../../public/menu/hair-care.svg";
+import personalHygiene from "./../../../public/menu/personal-hygiene.svg";
+import perfume from "./../../../public/menu/perfume.svg";
+import appliances from "./../../../public/menu/appliances.svg";
 import { StaticImageData } from "next/image";
 
 export type NavItem = {
