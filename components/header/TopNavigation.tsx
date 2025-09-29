@@ -8,38 +8,24 @@ import SearchBar from "./SearchBar";
 import LoginBtn from "./LoginBtn";
 import CartBtn from "./CartBtn";
 
-function useIsDesktop(minWidth = 1024): boolean {
-  return !!useMediaQuery({ query: `(min-width: ${minWidth}px)` });
-}
 
-type TopNavigationProps = {
-  isDesktop: boolean;
-};
 
-const TopNavigation: React.FC<TopNavigationProps> = ({ isDesktop }) => {
+const TopNavigation: React.FC = () => {
   return (
     <nav
-      className="container h-[80px] lg:h-[130px] mx-auto flex items-center px-5"
+      className="container h-[80px] lg:h-[130px] mx-auto flex items-center justify-between"
       aria-label="Primary site navigation"
     >
-      <div
-        className={`h-full ${
-          isDesktop ? "w-[60%]" : "w-full"
-        } flex gap-[40px] items-center`}
-      >
+      <div className="h-full lg:w-[60%] w-full flex gap-[40px] items-center justify-between px-2">
         <Logo />
         <SearchBar />
       </div>
-
-      {isDesktop && (
-        <div className="h-[40px] w-[30%] flex justify-end gap-6 items-center">
-          <LoginBtn />
-          <CartBtn />
-        </div>
-      )}
+      <div className="h-full w-[30%] hidden lg:flex justify-end gap-6 items-center ">
+        <LoginBtn />
+        <CartBtn />
+      </div>
     </nav>
   );
 };
-
 
 export default TopNavigation;
