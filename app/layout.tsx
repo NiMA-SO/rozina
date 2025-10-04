@@ -1,3 +1,4 @@
+'use client'
 import Header from "@/components/header/Header";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -7,6 +8,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import "swiper/css/free-mode";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,6 +21,9 @@ export const metadata: Metadata = {
   },
 };
 
+
+const queryClient = new QueryClient();
+
 export default function RootLayout({
   children,
 }: {
@@ -26,9 +32,11 @@ export default function RootLayout({
   return (
     <html lang="en" dir="rtl">
       <body className={inter.className}>
-        <Header />
-        {children}
-        <Footer />
+        <QueryClientProvider client={queryClient}>
+          <Header />
+          {children}
+          <Footer />
+        </QueryClientProvider>
       </body>
     </html>
   );
